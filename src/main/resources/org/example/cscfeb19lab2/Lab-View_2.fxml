@@ -2,15 +2,25 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.cscfeb19lab2.HelloController">
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="770.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cscfeb19lab2.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" prefHeight="29.0" prefWidth="270.0" text="Welcome to Farmingdale">
+      <font>
+         <Font size="24.0" />
+      </font></Label>
+   <ImageView fx:id="FarmingdaleImage" fitHeight="352.0" fitWidth="501.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@Images/Farmingdale_logo.png" />
+      </image></ImageView>
+    
+   <Slider onMouseClicked="#MySliderClicked" value="70.0" />
 </VBox>
