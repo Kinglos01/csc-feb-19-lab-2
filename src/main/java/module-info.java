@@ -4,6 +4,7 @@ module org.example.cscfeb19lab2 {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens org.example.cscfeb19lab2 to javafx.fxml;
     exports org.example.cscfeb19lab2;

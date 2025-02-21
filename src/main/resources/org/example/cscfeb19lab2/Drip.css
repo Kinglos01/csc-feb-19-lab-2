@@ -1,0 +1,23 @@
+#splashScreen{
+    -fx-background-color: #327332;
+
+}
+
+#welcomeText{
+    -fx-text-fill: white;
+}
+
+#loginScreen{
+    -fx-background-color: #327332;
+
+}
+
+#firstName{
+    -fx-text-fill: white;
+}
+
+#lastName{
+    -fx-text-fill: white;
+}
+
+

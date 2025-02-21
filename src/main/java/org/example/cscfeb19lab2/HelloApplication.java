@@ -3,27 +3,36 @@ package org.example.cscfeb19lab2;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    public static Stage loginStage;
+
     @Override
     public void start(Stage stage) throws IOException {
+        loginStage = stage;
         FXMLLoader root1 = new FXMLLoader(HelloApplication.class.getResource("Lab-View_2.fxml"));
-
-        Scene scene = new Scene(root1.load());
-        stage.setScene(scene);
+        Scene splash = new Scene(root1.load());
+        splash.getStylesheets().add(getClass().getResource("Drip.css").toExternalForm());
+        stage.setScene(splash);
         stage.show();
-
-
-        FXMLLoader root2 = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
-        Scene scene2 = new Scene(root2.load());
-        stage.setScene(scene2);
-
-
     }
+
+
+
+    public void startLogin(Stage stage) throws IOException {
+        FXMLLoader root2 = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
+        Scene loginScene = new Scene(root2.load());
+        loginScene.getStylesheets().add(getClass().getResource("Drip.css").toExternalForm());
+        loginStage.setScene(loginScene);
+    }
+
+
+
+
 
     public static void main(String[] args) {
         launch();

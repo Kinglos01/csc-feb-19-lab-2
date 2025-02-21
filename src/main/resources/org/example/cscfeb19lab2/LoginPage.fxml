@@ -6,18 +6,29 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="143.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cscfeb19lab2.LoginPageController">
+<AnchorPane fx:id="loginScreen" prefHeight="143.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cscfeb19lab2.LoginPageController">
    <children>
-      <TextField layoutX="33.0" layoutY="155.0" />
-      <TextField layoutX="33.0" layoutY="216.0" />
-      <ImageView fitHeight="116.0" fitWidth="168.0" layoutX="198.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="89.0" layoutY="259.0" mnemonicParsing="false" text="Login" />
-      <Label layoutX="236.0" layoutY="160.0" text="First Name" />
-      <Label layoutX="236.0" layoutY="242.0" text="Last Name" />
-      <MenuBar layoutY="7.0">
+      <TextField layoutX="33.0" layoutY="87.0" />
+      <TextField layoutX="33.0" layoutY="148.0" />
+      <ImageView fitHeight="68.0" fitWidth="117.0" layoutX="238.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/basicpfp.png" />
+         </image></ImageView>
+      <Button layoutX="85.0" layoutY="183.0" mnemonicParsing="false" text="Login" />
+      <Label fx:id="lastName" layoutX="236.0" layoutY="91.0" text="First Name">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="firstName" layoutX="237.0" layoutY="150.0" text="Last Name">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <MenuBar layoutY="-4.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
